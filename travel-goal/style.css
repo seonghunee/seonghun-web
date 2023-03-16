@@ -1,0 +1,47 @@
+#hero {
+    height: 800px;
+    background-image: url("image/place/ocean.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-content {
+    width: 800px;
+    background-color: rgba(25, 23, 23, 0.708);
+    box-shadow: 2px 4px 8px rgb(28, 27, 27);
+    border-radius: 8px;
+    text-align: center;
+    padding: 50px;
+    margin: auto;
+    position: relative;
+    top: 200px;
+}
+
+#hero-content h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#hero-content p {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#hero-content a {
+    background-color: yellow;
+    box-shadow: 2px 4px 8px black;
+    border-radius: 8px;
+    color: black;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero-content a:hover {
+    background-color: rgb(221, 221, 0);
+}
