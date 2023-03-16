@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(203, 188, 218);
+    font-family: 'Golos Text', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+    color: rgb(91, 17, 187);
+}
+
+img {
+    width: 350px;
+}
+
+header {
+    padding: 32px;
+}
+
+main {
+    background-color: rgb(91, 17, 187);
+    width: 800px;
+    margin: 32px auto 24px auto;
+    text-align: left;
+    padding: 64px 48px;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.849);
+}
+
+#dont {
+    font-weight: 800;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none ;
+}
+
+li {
+    padding: 4px 12px;
+    border-left: 4px solid transparent;
+    margin: 12px;
+}
+
+li.yellow {
+    color: rgb(238, 238, 87);
+    border-color: rgb(238, 238, 87);
+}
+
+a {
+    background-color: rgb(224, 224, 127);
+    color: rgb(91, 17, 187);
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 2px 6px;
+}
+
+a:hover,
+a:active {
+    background-color: rgb(147, 147, 63);
+}
+
+footer a{
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: rgb(235, 192, 75);
+}
+
+footer a:hover,
+footer a:active {
+    background-color: rgb(239, 170, 21);
+}
+
+footer p {
+    margin: 32px;
+    color: rgb(109, 106, 106);
+}
+
+footer {
+    margin-top: 32px;
+    margin-bottom: 100px;
+}
+
+#down {
+    background-color: rgb(224, 224, 127);
+    border-radius: 4px;
+    width: 400px;
+    padding: 12px;
+    margin: 12px auto 12px auto;
+}
