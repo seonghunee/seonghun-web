@@ -9,6 +9,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 60px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -32,4 +37,19 @@ header ul {
 
 header li {
     margin: 20px;
+}
+
+header a {
+    padding: 12px;
+    color: yellow;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+#about a:hover {
+    color: black;
+    background-color: yellow;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+
 }
