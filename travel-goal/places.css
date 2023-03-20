@@ -1,0 +1,68 @@
+body {
+    background: linear-gradient(30deg, rgb(77,77,77), rgb(55,55,55));
+}
+
+header {
+    position: static;
+}
+
+#page-logo a {
+    color: rgb(180,230, 235);
+}
+
+header a {
+    color: rgb(180,230, 235);
+}
+
+#about a:hover {
+    background-color: rgb(180,230, 235);
+    color: rgb(55,55,55);
+}
+
+main ul {
+    width: 1200px;
+    margin: 20px auto 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+}
+
+main li {
+    display: flex;
+    background-color: white;
+    box-shadow: 1px, 1px, 4px, rgba(0, 0, 0, 0.2);
+    border-radius: 6px;   
+    overflow: hidden;
+}
+
+main li:nth-of-type(3) {
+    grid-column:1/3;
+}
+
+main li img {
+    height: 280px;
+    width: 300px;
+}
+
+.item-content{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    text-decoration: none;
+    color: rgb(12, 203, 203);
+    padding: 8px 12px;
+}
+
+.actions a:hover {
+    background-color: rgb(174, 227, 227);
+    border-radius: 4px;
+}
+

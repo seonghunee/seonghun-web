@@ -22,6 +22,10 @@ ul {
     padding: 0;
 }
 
+header ul li {
+    margin: 10px;
+}
+
 #page-logo a {
     padding: 10px;
     font-family: 'Oleo Script', 'sans-serif';
@@ -52,4 +56,25 @@ header a {
     background-color: yellow;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 
+}
+
+footer {
+    background: linear-gradient(70deg, rgb(24,24,24), rgb(30,30,30));
+    padding: 32px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    height: 80px;
+    width: 80px;
+    margin: 0 50px;
+}
+
+footer img {
+    height: 100%;
+    width: 100%;
 }
