@@ -1,0 +1,89 @@
+body {
+    background-color: rgb(247, 247, 226);
+}
+
+h1  {
+    color: rgb(29, 27, 27);
+    text-align: center;
+}
+
+main {
+    background-color: rgb(244, 244, 216);
+    width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px rgb(173, 170, 170);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+input,
+textarea,
+select{
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    padding : 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+input:focus,
+textarea:focus {
+    background-color: rgb(242, 242, 191);
+
+}
+
+.control {
+    display: flex;
+}
+
+.control input {
+    width: auto;
+}
+
+#btn {
+    text-align: right;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#clear {
+
+    background-color: white;
+    border: 0;
+}
+
+#clear:hover {
+    background-color: rgb(240, 240, 0);
+    color: white;
+}
+
+#submit {
+    background-color: rgb(207, 207, 0);
+    color: white;
+    border: 0;
+}
+
+#submit:hover {
+    background-color: rgb(240, 240, 0);
+}
