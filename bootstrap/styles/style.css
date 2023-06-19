@@ -1,0 +1,17 @@
+
+#carousel-example {
+    width: 100%;
+    max-width: 50rem;
+    height: 30rem;
+    margin: 5rem auto 2rem auto;
+}
+
+#carousel-example img {
+    height: 30rem;
+    object-fit: cover;
+}
+
+#news-informed {
+    width: 30%;
+    margin: 4rem auto;
+}
