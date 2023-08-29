@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs', {title: 'manager-orders'}) %>
+    <link rel="stylesheet" href="styles/image.css">
+</head>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <h1>Manager-order</h1>
+    <% if(!products || products.length === 0) { %>
+        <p></p>
+    <% } else { %>
+        <section id="products-list">
+            <ul>
+                <% for (const product of products) { %>
+                    <li id="list-item">                        
+                        <img src="<%= product.imageUrl %>" alt="image">
+                        <p><%= product.title %></p>
+                        <a class="link" href="/manager-orders/<%= product._id %>">View & Edit</a>
+                        <form action="/manager-orders/<%= product._id %>/delete" method="post">
+                            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+                            <button class="btn">Delete</button>
+                        </form>
+                    </li>
+                <% } %>
+            </ul>
+        </section>
+    <% } %>
+</body>
+</html>

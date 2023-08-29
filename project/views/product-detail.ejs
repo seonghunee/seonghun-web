@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs', {title: 'product-detail'}) %>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/image.css">
+    <script src="/scripts/cart.js" defer></script>
+</head>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <h1>Product Detail</h1>
+    <main>
+        <section>
+            <img src="<%= product.imageUrl %>" alt="image">
+            <h2><%= product.title %></h2>
+            <p><%= product.summary %></p>
+            <p><%= product.price %></p>
+            <p><%= product.description %></p>
+        </section>
+        <button id="add-item" class="btn" data-id="<%= product._id %>" data-csrf="<%= locals.csrfToken %>">Add to Cart</button>
+    </main>
+</body>
+</html>

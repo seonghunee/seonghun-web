@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./includes/head.ejs', {title: 'manager-product'}) %>
+    <link rel="stylesheet" href="/styles/image.css">
+    <script src="/scripts/preview.js" defer></script>
+  </head>
+  <body>
+    <%- include('./includes/header.ejs') %>
+    <h1>Add New Product</h1>
+    <form action="/manager-product?_csrf=<%= locals.csrfToken %>" method="post" enctype="multipart/form-data">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" required />
+      </div>
+      <div>
+        <label for="image">Image</label>
+        <input type="file" id="image" name="image" />
+      </div>
+        <img id="preview-image" src="" alt="preview image!">
+      <div>
+        <label for="summary">Summary</label>
+        <input type="text" name="summary" required />
+      </div>
+      <div>
+        <label for="price">Price</label>
+        <input type="number" name="price" min="0.01" step="0.01" required />
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <button type="reset">Reset</button>
+      <button class="btn">Submit</button>
+    </form>
+  </body>
+</html>

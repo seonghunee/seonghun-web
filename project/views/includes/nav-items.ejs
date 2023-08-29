@@ -1,0 +1,32 @@
+<ul id="headerlist">
+  <li>
+    <a href="/shop">Shop</a>
+  </li>
+  <li>
+    <a href="/cart">Cart <span id="cart-totalquantity"><%= locals.cart.totalQuantity %></span></a>
+  </li>
+  <% if (locals.isAuth) { %>
+  <li>
+    <a href="/orders">Orders</a>
+  </li>
+  <% } %> <% if (locals.isAdmin) { %>
+  <li>
+    <a href="/manager-product">Manager Product</a>
+  </li>
+  <li>
+    <a href="/manager-orders">Manager Orders</a>
+  </li>
+  <% } %> <% if (!locals.isAuth) { %>
+  <li>
+    <a href="/signup">Signup</a>
+  </li>
+  <li>
+    <a href="/login">Login</a>
+  </li>
+  <% } %> <% if (locals.isAuth) { %>
+  <form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>" />
+    <button class="btn">logout</button>
+  </form>
+  <% } %>
+</ul>

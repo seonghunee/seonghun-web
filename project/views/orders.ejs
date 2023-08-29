@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs', {title: 'orders'}) %>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/image.css">
+</head>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <h1>Orders</h1>
+
+    <% if(!orderList || orderList === 0) { %>
+        <p></p>
+    <% } else { %>
+        <section id="products-list">
+            <ul>
+                <%> for (const order of orderList) { %>
+                    <p><%= order %></p>
+                    <!-- <li id="list-item">
+                        <p><%= order.productData.totalQuantity %></p> 
+                        <p><%= order.productData.totalPrice %></p>                                               
+                    </li> -->
+                    
+                <% } %>
+            </ul>
+        </section>
+    <% } %>
+</body>
+</html>

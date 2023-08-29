@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs', {title: 'signup'}) %>
+</head>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <h1>sign Up</h1>
+    <% if(inputData.hasError) { %>
+        <p><%= inputData.message %></p>
+    <% } %>
+    <form action="/signup" method="post">
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" value="<%= inputData.email %>" required>
+        </div>
+        <div>
+            <label for="confirmEmail">Confirm Email</label>
+            <input type="email" name="confirmEmail" value="<%= inputData.confirmEmail %>" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" minlength="6" value="<%= inputData.password %>" required>
+        </div>
+        <hr>
+        <div>
+            <label for="name">User Name</label>
+            <input type="text" name="name" value="<%= inputData.name %>" required>
+        </div>
+        <div>
+            <label for="street">Street</label>
+            <input type="text" name="street" value="<%= inputData.address.street %>" required>
+        </div>
+        <div>
+            <label for="postal">Postal Code</label>
+            <input type="text" name="postal" value="<%= inputData.address.postalCode %>" required>
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input type="text" name="city" value="<%= inputData.address.city %>" required>
+        </div>
+        <div>
+            <button class="btn">Create Account</button>
+        </div>
+    </form>
+    <div>
+        <a class="link" href="/login">Login instead</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./includes/head.ejs', {title: 'login'}) %>
+</head>
+<body>
+    <%- include('./includes/header.ejs') %>
+    <h1>Login</h1>
+    <% if(inputData.hasError) { %>
+        <p><%= inputData.message %></p>
+    <% } %>
+    <form action="/login" method="post">
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <div>
+            <label for="email">E-amil</label>
+            <input type="email" name="email" value="<%= inputData.email %>" required>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" value="<%= inputData.password %>" required>
+        </div>
+        <div>
+            <button class="btn">Login</button>
+        </div>
+    </form>
+    <div>
+        <a href="/signup">Create a new user</a>
+    </div>
+</body>
+</html>
